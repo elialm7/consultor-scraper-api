@@ -8,7 +8,7 @@ let html_data: string;
 let webparser: IConsultorWebParser; 
 describe("Tests del Web Parser",  ()=>{
     beforeAll(async ()=>{
-         html_data = utils.read_File(`${path_to_resources}/consultor_html_data.html`);
+         html_data = utils.read_File(`${path_to_resources}/consultor_html_data.txt`);
          webparser = new ConsultorWebParser(html_data);
     });
     it("Debe parsear la cabecera del estudiante ", async ()=>{
