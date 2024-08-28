@@ -6,10 +6,8 @@ import expressLayouts from 'express-ejs-layouts';
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-app.use(expressLayouts);
-app.set('layout', false);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(router);
 
 app.listen(PORT, () => {
