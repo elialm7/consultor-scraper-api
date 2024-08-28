@@ -6,14 +6,8 @@ import { info_estudiante, info_contacto, info_tiempo_rendimiento, info_inscripci
 import { ScraperException } from '../../error/scraper.error';
 const router = Router();
 
-router.get('/', async (req, res)=>{
-    return res.redirect('/Login');
-});
-router.get('/Login', async (req, res) => {
-    res.render('index', {title: 'Consultor'});
-});
 router.get("/api/access",  async(req, res)=>{
-    const {cedula, pass} = req.query; 
+    const {cedula, pass} = req.body; 
     if(!cedula || !pass){
         return res.status(StatusCodes.BAD_REQUEST).send({error: "La cedula/pass no fue dado"});
     }
