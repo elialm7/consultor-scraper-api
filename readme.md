@@ -25,7 +25,7 @@ Se esperan los siguientes parámetros en el cuerpo de la solicitud:
 ### Ejemplo usando `curl`:
 
 ```bash
-curl -X GET http://localhost:3000/api/ \
--H "Content-Type: application/x-www-form-urlencoded" \
+curl -X GET http://localhost:3000/api/ 
+-H "Content-Type: application/x-www-form-urlencoded" 
 -d "cedula=miCedula&pass=miContraseña"
 ```
